@@ -17,8 +17,6 @@ public class Main {
         if (response.equalsIgnoreCase("A")){
             typeSelection = "A";
              unit = "°Celsius";
-            System.out.println("Enter the value (C) to be converted:");
-
 
         }
         else {
