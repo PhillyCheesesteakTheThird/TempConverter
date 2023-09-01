@@ -5,7 +5,7 @@ public class TempConvert {
         if (typeSelection.equals("A")) {
             output = (inputInt * 9 / 5) + 32;
         } else {
-            output = (inputInt * 5 / 9) - 32;
+            output = (inputInt - 32) * 5/9;
 
         }
         return output;
