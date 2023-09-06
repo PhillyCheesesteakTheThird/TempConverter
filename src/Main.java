@@ -32,7 +32,7 @@ public class Main {
         inputNum = scanner.nextDouble();
         //Print output
 
-        System.out.println("Your input value: "+ inputNum +" "+ unit + "\nCalculates to: \nA" + tempConvert.convert(inputNum, typeSelection) +" ");
+        System.out.println("Your input value: "+ inputNum +" "+ unit + "\nCalculates to: \nA" + tempConvert.convert(inputNum, typeSelection));
 
     }
 }
