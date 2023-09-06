@@ -2,7 +2,9 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        //Creates a new scanner object to read user responses
         Scanner myObj = new Scanner(System.in);
+        //Creates a new TempConvert object from the class TempConvert
         TempConvert tempConvert = new TempConvert();
         //Prompts the user for a temperature conversion direction
         System.out.println("Which way are you converting?");
@@ -13,10 +15,10 @@ public class Main {
         double inputNum;
         //If user response A, the program uses the C>F conversion. Vice versa if B
         String unit;
-        String otherUnit;
         if (response.equalsIgnoreCase("A")){
             typeSelection = "A";
-             unit = "°Celsius";
+             unit = "°C";
+            System.out.println("Enter the value (C) to be converted:");
 
         }
         else {
@@ -26,15 +28,10 @@ public class Main {
 
 
         }
-        inputNum = Double.parseDouble(myObj.nextLine());
+        inputNum = myObj.nextDouble();
         //Print output
-        if(typeSelection.equals("A")) {
-            otherUnit = "°F";
-        }
-        else {
-            otherUnit = "°C";
-        }
-        System.out.println("Your input value: "+ inputNum +" "+ unit + "\nCalculates to: " + tempConvert.convert(inputNum, typeSelection) +" " + otherUnit);
+
+        System.out.println("Your input value: "+ inputNum +" "+ unit + "\nCalculates to: " + tempConvert.convert(inputNum, typeSelection) +" ");
 
     }
 }
