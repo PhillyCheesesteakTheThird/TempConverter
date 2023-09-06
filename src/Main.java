@@ -3,14 +3,15 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         //Creates a new scanner object to read user responses
-        Scanner myObj = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         //Creates a new TempConvert object from the class TempConvert
         TempConvert tempConvert = new TempConvert();
+
         //Prompts the user for a temperature conversion direction
         System.out.println("Which way are you converting?");
-        System.out.println("A) Celsius > Fahrenheit \nB) Fahrenheit > Celsius");
+        System.out.println("A) Celsius > Fahrenheit & Kelvin\nB) Fahrenheit > Celsius & Kelvin");
 
-        String response = myObj.nextLine();
+        String response = scanner.nextLine();
         String typeSelection;
         double inputNum;
         //If user response A, the program uses the C>F conversion. Vice versa if B
@@ -28,10 +29,10 @@ public class Main {
 
 
         }
-        inputNum = myObj.nextDouble();
+        inputNum = scanner.nextDouble();
         //Print output
 
-        System.out.println("Your input value: "+ inputNum +" "+ unit + "\nCalculates to: " + tempConvert.convert(inputNum, typeSelection) +" ");
+        System.out.println("Your input value: "+ inputNum +" "+ unit + "\nCalculates to: \nA" + tempConvert.convert(inputNum, typeSelection) +" ");
 
     }
 }
