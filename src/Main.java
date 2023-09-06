@@ -10,7 +10,7 @@ public class Main {
         //Prompts the user for a temperature conversion direction
         System.out.println("Which way are you converting?");
         System.out.println("A) Celsius > Fahrenheit & Kelvin\nB) Fahrenheit > Celsius & Kelvin");
-
+        //user response is set as the next line detected by the scanner
         String response = scanner.nextLine();
         String typeSelection;
         double inputNum;
@@ -24,11 +24,12 @@ public class Main {
         }
         else {
             typeSelection = "B";
-            unit = "°Fahrenheit";
+            unit = "°F";
             System.out.println("Enter the value (F) to be converted:");
 
 
         }
+        //User input is expected to be a number that could contain decimals. Thus Double is used
         inputNum = scanner.nextDouble();
         //Print output
 
